@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "tatm",
+	"version": "${version}",
+	"name": "tatm",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/tatm/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.tdjs.tatm.Tatm"
+		],
+		"client": [
+			"com.tdjs.tatm.TatmClient"
+		],
+		"fabric-datagen": [
+			"com.tdjs.tatm.TatmDataGenerator"
+		]
+	},
+	"mixins": [
+		"tatm.mixins.json",
+		{
+			"config": "tatm.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
