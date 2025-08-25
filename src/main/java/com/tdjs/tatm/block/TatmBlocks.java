@@ -19,7 +19,14 @@ public class TatmBlocks {
             .nonOpaque()
     );
 
+    public static final Block TARDIS_EXIT_BLOCK = new TardisExitBlock(
+        FabricBlockSettings.of(Material.WOOD)
+            .strength(2.0f)
+            .nonOpaque()
+    );
+
     public static void register() {
         Registry.register(Registries.BLOCK, new Identifier("tatm", "tardis"), TARDIS_BLOCK);
+        Registry.register(Registries.BLOCK, new Identifier("tatm", "tardis_exit"), TARDIS_EXIT_BLOCK);
     }
 }
