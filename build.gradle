@@ -1,6 +1,14 @@
 plugins {
-	id 'fabric-loom' version "${loom_version}"
+	id 'fabric-loom' version '0.12-SNAPSHOT'
 	id 'maven-publish'
+}
+
+repositories {
+	mavenCentral()
+	maven {
+		name = 'Fabric'
+		url = 'https://maven.fabricmc.net/'
+	}
 }
 
 version = project.mod_version

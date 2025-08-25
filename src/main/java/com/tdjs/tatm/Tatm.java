@@ -1,5 +1,8 @@
 package com.tdjs.tatm;
 
+import com.tdjs.tatm.block.TatmBlockEntities;
+import com.tdjs.tatm.block.TatmBlocks;
+import com.tdjs.tatm.item.TatmItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -19,6 +22,13 @@ public class Tatm implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		LOGGER.info("Hello Fabric world!");
+		LOGGER.info("Initializing TARDIS mod...");
+
+		// Register blocks, items, and block entities
+		TatmBlocks.register();
+		TatmItems.register();
+		TatmBlockEntities.register();
+
+		LOGGER.info("TARDIS mod initialized successfully!");
 	}
 }
